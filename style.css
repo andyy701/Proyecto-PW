@@ -1,3 +1,37 @@
+/*andy*/
+#logo-doc {
+  width: 12%;
+}
+
+.div1 {
+  position: relative;
+  left: 1%;
+}
+
+.div2 {
+  position: relative;
+  left: 1%;
+  width: 30%;
+}
+
+.btn1 {
+  width: 40%;
+}
+
+.r1 {
+  font-size: 80%;
+}
+
+.docs {
+  width: 30%;
+}
+
+.doc-a {
+  color: black;
+}
+
+/**/
+
 li {
   list-style: none;
 }
@@ -79,12 +113,10 @@ ul {
   grid-area: main;
   position: relative;
   white-space: nowrap;
-  background: repeating-linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 14.2%,
-    gray 14.3%
-  );
+  background: repeating-linear-gradient(to right,
+      transparent 0%,
+      transparent 14.2%,
+      gray 14.3%);
 }
 
 .event-name {
