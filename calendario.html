@@ -10,19 +10,37 @@
 
 </head>
 <body>
-    <h1 class="title">Horario de atención</h1>
+    <h1 class="title text-center m-5">Horario de atención</h1>
 
-	<div>
-		<label for="">Enlace de reunión:</label>
+	<div class="container m-5">
+		<div class="row justify-content-center">
+			<div class="col-5">
+				<label for="">Enlace de reunión:</label>
 		<input type="url" value="https://ulima-edu-pe.zoom.us/j/97234952805?pwd=M3llQkcwZ0VBaDA2eHlOYmQ3WXRYUT09#success">
+			</div>
+		</div>
+		
 	</div>
-    <label for="">Fecha: </label>
-	<input type="date" id='date'/>
-	<label for="">Desde: </label>
-	<input type="time" id='starttime'/>
-	<label for="">Hasta: </label>
-	<input type="time" id='endtime'/>
-	<button>Agregar</button>
+
+	<div class="container m-5">
+		<div class="row">
+			<div class="col">
+				<label for="">Fecha: </label>
+				<input type="date" id='date'/>
+			</div>
+			<div class="col">
+				<label for="">Desde: </label>
+				<input type="time" id='starttime'/>
+			</div>
+			<div class="col">
+				<label for="">Hasta: </label>
+				<input type="time" id='endtime'/>
+			</div>
+			<div class="col">
+				<button class="btn btn-success">Agregar</button>
+			</div>
+		</div>
+	</div>
 
 	<div class="calendar-container">
 
