@@ -21,6 +21,18 @@
     alert("Recordatorio enviado.");
   })
 
+  recordatorio2.addEventListener('click', () =>{
+    alert("Recordatorio enviado.");
+  })
+
+  recordatorio3.addEventListener('click', () =>{
+    alert("Recordatorio enviado.");
+  })
+
+  recordatorio4.addEventListener('click', () =>{
+    alert("Recordatorio enviado.");
+  })
+
 //   agregar.addEventListener('click', () => {
 
 //     container = document.getElementById("container")
