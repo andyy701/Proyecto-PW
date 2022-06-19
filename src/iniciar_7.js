@@ -1,11 +1,12 @@
-import { Outlet } from "react-router-dom";
-import Iniciar_sesion from "./componentes/Iniciar_sesion";
 
+import Iniciar_Sesion from "./componentes/Iniciar_sesion";
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import Registrar_6 from './registrar_6';
 function Iniciar_7() {
     return (
       <div>
-        <Outlet/>
-        <Iniciar_sesion/>
+        <Iniciar_Sesion/>
+        
       </div>
     );
 }

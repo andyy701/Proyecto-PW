@@ -1,4 +1,4 @@
-const Iniciar_sesion = _ => {
+const Iniciar_Sesion = _ => {
   return (
     <div>
       <div>
@@ -41,4 +41,4 @@ const Iniciar_sesion = _ => {
     </div>
   )
 }
-export default Iniciar_sesion;
+export default Iniciar_Sesion;
