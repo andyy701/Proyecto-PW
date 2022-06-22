@@ -1,6 +1,9 @@
+import { Link, useNavigate } from "react-router-dom";
 import Especialidad from "../componentes/Especialidad"
 
 const Registrarse = _ => {
+    const navigate = useNavigate();
+    const registrar = () =>{navigate("/iniciar_7")}
     return (
         <div>
             <h1 class="text-center">Registrarse</h1>
@@ -28,7 +31,7 @@ const Registrarse = _ => {
                 </div>
 
                 <div class="text-center m-4">
-                    <input type="submit" value="Registrar" />
+                    <button onClick={registrar}>Registrar</button>
                 </div>
 
             </form>

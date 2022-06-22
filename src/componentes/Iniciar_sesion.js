@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Iniciar_Sesion = _ => {
   return (
     <div>
@@ -25,12 +27,15 @@ const Iniciar_Sesion = _ => {
           <button>Iniciar sesión</button>
         </a> */}
         <div class="text-center m-5">
-          <button class=""><a href="inicio.html" class="text-decoration-none ">Iniciar sesión</a></button>
+          <button class=""><Link to="Inicio_10" className="text-decoration-none">Iniciar sesión</Link></button>
         </div>
         {/* <!-- </form> --> */}
       </div>
       <div class="text-center m-5">
-        <a href="registrar_6.html">Crear nueva cuenta</a>
+        <Link to="Recuperar_doc">¿Olvidaste la Contraseña?</Link>
+      </div>
+      <div class="text-center m-5">
+        <Link to="registrar_6">Crear nueva cuenta</Link>
       </div>
 
 

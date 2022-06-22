@@ -53,6 +53,7 @@ function App() {
             </Route>
             <Route path="recuperar_doc" element={<Recuperar_doc />} />
           </Route>
+
           <Route path="registrar_6" >
             <Route index element={<Registrar_6 />} />
             <Route path="iniciar_7" element={<Iniciar_7 />} />
@@ -62,6 +63,7 @@ function App() {
             <Route index element={<Newaccount_22 />} />
             <Route path="login_21" element={<Login_21 />} />
           </Route>
+
           <Route path="login_21" >
             <Route index element={<Login_21 />} />
             <Route path="newaccount_22" element={<Newaccount_22 />} />
@@ -82,27 +84,6 @@ function App() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-        
         <Route path="visualizarCitas_13" element={<VisualizarCitas_13 />} />
       </Routes>
     </Router>
