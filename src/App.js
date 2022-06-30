@@ -39,9 +39,10 @@ function App() {
             <Route index element={<Iniciar_7 toLogin="inicio_10" toRecuperar="recuperar_doc"/>} />
             <Route path="registrar_6" element={<Registrar_6 />} />
             <Route path="inicio_10">
-              <Route index element={<Inicio_10 />} />
+              <Route index element={<Inicio_10 toModify="modificar_datos_8"/>} />
               <Route path="comentarios_doc_20" element={<Comentarios_doc_20 />} />
-              <Route path="modificar_datos_8" element={<Modificar_datos_8 />} />
+              <Route path="modificar_datos_8" element={<Modificar_datos_8/>} />
+              {/* <Route path="modificar_datos_8" element={<Modificar_datos_8 toModify="modificar_datos_8"/>} /> */}
               <Route path="calendario_9" element={<Calendario_9 />} />
               <Route path="preg_priv_doc_19" element={<Preg_priv_doc_19 />} />
               <Route path="preg_pub_doc_18" element={<Preg_pub_doc_18 />} />

@@ -1,4 +1,6 @@
-const Inicio = _ => {
+import { Link } from "react-router-dom";
+
+const Inicio = (props) => {
     return (
         <div>
             <h1 class="text-center">Inicio</h1>
@@ -22,7 +24,8 @@ const Inicio = _ => {
                             <a class="nav-link" href="preg pub doc.html">Preguntas privadas de pacientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="modificar_datos.html">Modificar datos</a>
+                            <Link class="nav-link" to={props.toModify}>Modificar datos</Link>
+                            {/* <a class="nav-link" href="preg pub doc.html">Modificar datos</a> */}
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="comentarios doc.html">Comentarios de los Pacientes</a>

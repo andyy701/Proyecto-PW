@@ -1,8 +1,8 @@
 import Inicio from "./componentes/Inicio";
-function Inicio_10() {
+function Inicio_10(props) {
   return (
     <div>
-      <Inicio/>
+      <Inicio toModify={props.toModify}/>
     </div>
   );
 }
