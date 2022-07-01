@@ -9,26 +9,25 @@ const Inicio = (props) => {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="pacientes.html">Proximas Citas</a>
+                            <Link class="nav-link" to={props.toPacientes}>Proximas Citas</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="calendario.html">Calendario de Citas</a>
+                            <Link class="nav-link" to={props.toCalendar}>Calendario de Citas</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Historial de citas</a>
+                            <Link class="nav-link" to={props.toHistorial}>Historial de citas</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="preg priv doc.html">Preguntas públicas de pacientes</a>
+                            <Link class="nav-link" to={props.toCalendar}>Preguntas públicas de pacientes</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="preg pub doc.html">Preguntas privadas de pacientes</a>
+                            <Link class="nav-link" to={props.toCalendar}>Preguntas privadas de pacientes</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" to={props.toModify}>Modificar datos</Link>
-                            {/* <a class="nav-link" href="preg pub doc.html">Modificar datos</a> */}
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="comentarios doc.html">Comentarios de los Pacientes</a>
+                            <Link class="nav-link" to={props.toCalendar}>Comentarios de los Pacientes</Link>
                         </li>
                     </ul>
                 </div>

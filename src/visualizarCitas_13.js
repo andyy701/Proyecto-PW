@@ -21,9 +21,6 @@ function VisualizarCitas_13() {
           </thead>
           <tbody>
             <Cita />
-            <Cita />
-            <Cita />
-            <Cita />
           </tbody>
         </table>
       </div>
