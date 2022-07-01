@@ -35,7 +35,7 @@ const Iniciar_Sesion = (props) => {
         <Link to={props.toRecuperar}>¿Olvidaste la Contraseña?</Link>
       </div>
       <div class="text-center m-5">
-        <Link to="registrar_6">Crear nueva cuenta</Link>
+        <Link to={props.toRegistrar}>Crear nueva cuenta</Link>
       </div>
 
 

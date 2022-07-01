@@ -1,8 +1,8 @@
 import Inicio from "./componentes/Inicio";
-function Inicio_10(props) {
+function Inicio_10() {
   return (
     <div>
-      <Inicio toModify={props.toModify} toCalendar={props.toCalendar} toHistorial={props.toHistorial} toPacientes={props.toPacientes}/>
+      <Inicio toModify="modificar_datos_8" toCalendar="calendario_9" toHistorial="visualizarCitas_13" toPacientes="pacientes_11"/>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import Iniciar_sesion from "./componentes/Iniciar_sesion";
 
-function Login_21(props) {
+function Login_21() {
     return (
       <div>
-        <Iniciar_sesion toLogin={props.toLogin} toRecuperar={props.toRecuperar}/>
+        <Iniciar_sesion toLogin="inicio_paciente_23" toRecuperar="recuperar_pac"/>
       </div>
     );
 }
