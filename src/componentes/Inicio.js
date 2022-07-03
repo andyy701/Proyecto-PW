@@ -18,24 +18,24 @@ const Inicio = (props) => {
                             <Link class="nav-link" to={props.toHistorial}>Historial de citas</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to={props.toCalendar}>Preguntas públicas de pacientes</Link>
+                            <Link class="nav-link" to={props.toPregPubDoc}>Preguntas públicas de pacientes</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to={props.toCalendar}>Preguntas privadas de pacientes</Link>
+                            <Link class="nav-link" to={props.toPregPrivDoc}>Preguntas privadas de pacientes</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" to={props.toModify}>Modificar datos</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to={props.toCalendar}>Comentarios de los Pacientes</Link>
+                            <Link class="nav-link" to={props.toComentariosDoc}>Comentarios de los Pacientes</Link>
                         </li>
                     </ul>
                 </div>
-                {/* <a href="pacientes.html">Proximas Citas</a> 
-                    <a href="calendario.html">Calendario de Citas</a>
-                    <a href="">Historial de citas</a>
-                    <a href="">Preguntas de pacientes</a>
-                    <a href="modificar_datos.html">Modificar datos</a> */}
+                  
+              {/* faltan estos como links no en el navbar: 
+              toFinalizarCita="finalizarCita_16" 
+              toHistoriaClinica="historiaClinica_15" toHistoricoConsultas="historicoConsultas_17" toInfoPac="informacionPaciente_14" */}
+              
             </nav>
 
 

@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import Especialidad from "../componentes/Especialidad"
 
-const Registrarse = _ => {
+const Registrarse = (props) => {
     const navigate = useNavigate();
-    const registrar = () =>{navigate("/iniciar_7")}
+    const registrar = () =>{navigate(props.toRegistrar)}
     return (
         <div>
             <h1 class="text-center">Registrarse</h1>
