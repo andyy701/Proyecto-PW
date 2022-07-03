@@ -5,7 +5,7 @@ function Registrar_6() {
     return (
       <div>
         
-        <Registrarse/>
+        <Registrarse toRegistrar="/iniciar_7"/>
       </div>
     );
 }

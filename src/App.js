@@ -36,10 +36,10 @@ function App() {
           <Route index element={<Principal />} />
 
           <Route path="iniciar_7">
-            <Route index element={<Iniciar_7 toLogin="inicio_10" toRecuperar="recuperar_doc"/>} />
+            <Route index element={<Iniciar_7 />} />
             <Route path="registrar_6" element={<Registrar_6 />} />
             <Route path="inicio_10">
-              <Route index element={<Inicio_10 toModify="modificar_datos_8" toCalendar="calendario_9" toHistorial="visualizarCitas_13" toPacientes="pacientes_11"/>} />
+              <Route index element={<Inicio_10 />} />
               <Route path="comentarios_doc_20" element={<Comentarios_doc_20 />} />
               <Route path="modificar_datos_8" element={<Modificar_datos_8/>} />
               <Route path="calendario_9" element={<Calendario_9 />} />
@@ -66,7 +66,7 @@ function App() {
           </Route>
 
           <Route path="login_21" >
-            <Route index element={<Login_21 toLogin="inicio_paciente_23" toRecuperar="recuperar_pac"/>} />
+            <Route index element={<Login_21 />} />
             <Route path="newaccount_22" element={<Newaccount_22 />} />
             <Route path="inicio_paciente_23">
               <Route index element={<Inicio_paciente_23 />} />
