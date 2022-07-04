@@ -7,6 +7,7 @@ const Medico=_=>{
                     <a href="perfil del doc-pac2.html" class="doc-a">
                         Dra. Kelli Elena Bernal Gallardo
                     </a>
+                    
                     <div>
                         Ginecóloga
                     </div>

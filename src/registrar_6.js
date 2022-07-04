@@ -1,11 +1,11 @@
 import Registrarse from "./componentes/Registrarse";
 
 
-function Registrar_6() {
+function Registrar_6(props) {
     return (
       <div>
         
-        <Registrarse toRegistrar="/iniciar_7"/>
+        <Registrarse toRegistrar={props.toRegistrar}/>
       </div>
     );
 }

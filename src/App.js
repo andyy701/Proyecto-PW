@@ -36,8 +36,8 @@ function App() {
           <Route index element={<Principal />} />
 
           <Route path="iniciar_7">
-            <Route index element={<Iniciar_7 />} />
-            <Route path="registrar_6" element={<Registrar_6 />} />
+            <Route index element={<Iniciar_7 toRegistrar="registrar_6"/>} />
+            <Route path="registrar_6" element={<Registrar_6 toRegistrar="/iniciar_7"/>} />
             <Route path="inicio_10">
               <Route index element={<Inicio_10 />} />
               <Route path="comentarios_doc_20" element={<Comentarios_doc_20 />} />
@@ -56,8 +56,8 @@ function App() {
           </Route>
 
           <Route path="registrar_6" >
-            <Route index element={<Registrar_6 />} />
-            <Route path="iniciar_7" element={<Iniciar_7 />} />
+            <Route index element={<Registrar_6 toRegistrar="iniciar_7"/>} />
+            <Route path="iniciar_7" element={<Iniciar_7 toRegistrar="/registrar_6"/>} />
           </Route>
 
           <Route path="newaccount_22">

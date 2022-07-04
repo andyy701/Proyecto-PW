@@ -1,34 +1,33 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Inicio = (props) => {
+    const navbars={inicio_10:[{text:"Proximas Citas",to:props.toPacientes},{text:"Calendario de Citas",to:props.toCalendar},
+                   {text:"Historial de citas",to:props.toHistorial},{text:"Preguntas públicas de pacientes",to:props.toPregPubDoc},
+                   {text:"Preguntas privadas de pacientes",to:props.toPregPrivDoc},{text:"Modificar datos",to:props.toModify},
+                   {text:"Comentarios de los Pacientes",to:props.toComentariosDoc}],
+                   inicio_paciente_23:[{text:"Lista de Doctores",to:props.toPerfilDocPac},
+                   {text:"Preguntar al doctor",to:props.toPregPubPac}]};
+    
+    
     return (
         <div>
             <h1 class="text-center">Inicio</h1>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toPacientes}>Proximas Citas</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toCalendar}>Calendario de Citas</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toHistorial}>Historial de citas</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toPregPubDoc}>Preguntas públicas de pacientes</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toPregPrivDoc}>Preguntas privadas de pacientes</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toModify}>Modificar datos</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to={props.toComentariosDoc}>Comentarios de los Pacientes</Link>
-                        </li>
+                        
+                        {
+                            navbars[props.Inicio].map(enlace=>(
+                                <li class="nav-item">
+                                 <Link class="nav-link" to={enlace.to}>{enlace.text}</Link>
+                                </li>
+                            ))
+                        } 
+                        
+                        
                     </ul>
                 </div>
                   
@@ -38,9 +37,10 @@ const Inicio = (props) => {
               
             </nav>
 
-
+            
             {/* <script src="bootstrap.bundle.min.js"></script>  */}
             <script src="js/script.js"></script>
+            
         </div>
     )
 }
