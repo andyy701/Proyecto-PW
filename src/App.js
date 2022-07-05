@@ -24,9 +24,11 @@ import Registrar_6 from './registrar_6';
 import Reserva_cita_27 from './reserva cita_27';
 import VisualizarCitas_13 from './visualizarCitas_13';
 import 'bootstrap/dist/css/bootstrap.css';
+import './style.css'
 import Principal from './principal';
+import { useState } from 'react';
 function App() {
-
+  const [mostrarInfo,setMostrarInfo]=useState([]);
   return (
     <Router>
 
@@ -71,9 +73,9 @@ function App() {
             <Route path="inicio_paciente_23">
               <Route index element={<Inicio_paciente_23 />} />
               <Route path="perfil_del_doc_pac_25">
-                <Route index element={<Perfil_del_doc_pac_25 />}/>
+                <Route index element={<Perfil_del_doc_pac_25 cambiarInfo={setMostrarInfo}/>}/>
                 <Route path="perfil_del_doc_pac2">
-                  <Route index element={<Perfil_del_doc_pac2 />}/>
+                  <Route index element={<Perfil_del_doc_pac2 info={mostrarInfo}/>}/>
                   <Route path="reserva_cita_27" element={<Reserva_cita_27 />} />
                 </Route>
               </Route>

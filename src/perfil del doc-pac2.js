@@ -1,9 +1,10 @@
 import Perfil_Profesional from "./componentes/Perfil_profesional";
 
-function Perfil_del_doc_pac2() {
+
+function Perfil_del_doc_pac2(props) {
     return (
       <div>
-        <Perfil_Profesional/>
+        <Perfil_Profesional datos={props.info}/>
       </div>
     );
 }
