@@ -26,9 +26,21 @@ import VisualizarCitas_13 from './visualizarCitas_13';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css'
 import Principal from './principal';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 function App() {
   
+  const rutas=[{path:"comentarios_doc_20",element:<Comentarios_doc_20 />},
+                   {path:"modificar_datos_8",element:<Modificar_datos_8/>},
+                   {path:"calendario_9",element:<Calendario_9 />},
+                   {path:"visualizarCitas_13",element:<VisualizarCitas_13 />},
+                   {path:"preg_priv_doc_19",element:<Preg_priv_doc_19 />},
+                   {path:"preg_pub_doc_18",element:<Preg_pub_doc_18 />},
+                   {path:"finalizarCita_16",element:<FinalizarCita_16 />},
+                   {path:"historiaClinica_15",element:<HistoriaClinica_15 />},
+                   {path:"historicoConsultas_17",element:<HistoricoConsultas_17 />},
+                   {path:"informacionPaciente_14",element:<InformacionPaciente_14 />},
+                   {path:"pacientes_11",element:<Pacientes_11 />}]
+
   const [mostrarInfo,setMostrarInfo]=useState({});
   
   return (
@@ -44,29 +56,37 @@ function App() {
             <Route path="registrar_6" element={<Registrar_6 toRegistrar="/iniciar_7"/>} />
             <Route path="inicio_10">
               <Route index element={<Inicio_10 />} />
-              <Route path="comentarios_doc_20" element={<Comentarios_doc_20 />} />
-              <Route path="modificar_datos_8" element={<Modificar_datos_8/>} />
-              <Route path="calendario_9" element={<Calendario_9 />} />
-              <Route path="visualizarCitas_13" element={<VisualizarCitas_13 />} />
-              <Route path="preg_priv_doc_19" element={<Preg_priv_doc_19 />} />
-              <Route path="preg_pub_doc_18" element={<Preg_pub_doc_18 />} />
-              <Route path="finalizarCita_16" element={<FinalizarCita_16 />} />
-              <Route path="historiaClinica_15" element={<HistoriaClinica_15 />} />
-              <Route path="historicoConsultas_17" element={<HistoricoConsultas_17 />} />
-              <Route path="informacionPaciente_14" element={<InformacionPaciente_14 />} />
-              <Route path="pacientes_11" element={<Pacientes_11 />} />
+              {
+                 rutas.map((ruta)=>(
+                   <Route path={ruta.path} element={ruta.element}/>
+                 ))
+              }
+              </Route>
             </Route>
             <Route path="recuperar_doc" element={<Recuperar_doc />} />
           </Route>
 
           <Route path="registrar_6" >
             <Route index element={<Registrar_6 toRegistrar="iniciar_7"/>} />
-            <Route path="iniciar_7" element={<Iniciar_7 toRegistrar="/registrar_6"/>} />
+            <Route path="iniciar_7" >
+              <Route index element={<Iniciar_7 toRegistrar="/registrar_6"/>}/>
+              <Route path="inicio_10">
+                <Route index element={<Inicio_10 />} />
+                {
+                   rutas.map((ruta)=>(
+                     <Route path={ruta.path} element={ruta.element}/>
+                   ))
+                }
+              </Route>
+              <Route path="recuperar_doc" element={<Recuperar_doc />} />
+            </Route>
           </Route>
 
           <Route path="newaccount_22">
             <Route index element={<Newaccount_22 />} />
-            <Route path="login_21" element={<Login_21 />} />
+            <Route path="login_21" >
+              <Route index element={<Login_21 />}/>
+            </Route>
           </Route>
 
           <Route path="login_21" >
@@ -85,7 +105,7 @@ function App() {
             </Route>
             <Route path="recuperar_pac" element={<Recuperar_pac />} />
           </Route>
-        </Route>
+        
 
 
 
