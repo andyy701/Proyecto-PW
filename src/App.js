@@ -26,9 +26,11 @@ import VisualizarCitas_13 from './visualizarCitas_13';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css'
 import Principal from './principal';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 function App() {
-  const [mostrarInfo,setMostrarInfo]=useState([]);
+  
+  const [mostrarInfo,setMostrarInfo]=useState({});
+  
   return (
     <Router>
 

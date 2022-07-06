@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo_doctor from '../logo doctor.png'
 const Perfil_Profesional = props => {
   return (
@@ -5,20 +6,21 @@ const Perfil_Profesional = props => {
       <div className="row mb-1 ">
         <img className="col-4" src={logo_doctor} id="logo-doc"></img>
           <div className="col-8">
-            <div>Nombre: Kelli Elena Bernal Gallardo</div>
-            <div>Especialidad: Ginecóloga</div>
+            <div>Nombre: {props.datos.Nombre}</div>
+            <div>Especialidad: {props.datos.Especialidad}</div>
           </div>
       </div>
       <div className="border-dark border-top " ></div>
       <div className="row border-top border-dark mt-2 ">
-        <div className="border-bottom"><div className="div1">Direccion: Prolongación Ayacucho 494</div></div>
-        <div className="border-bottom"><div className="div1">Horario: Lunes de 9:00 a.m. - 1:00 p.m.</div></div>
-        <div className="border-bottom"><div className="div1">Modalidad: Presencial</div></div>
-        <div className="border-bottom"><div className="div1">Precio consulta: 100 Nuevos Soles</div></div>
-        <div className="border-bottom"><div className="div1">Comentarios: Ninguno</div></div>
-        <div className="border-bottom"><div className="div1">Calificación: -</div></div>
+        <div className="border-bottom div1">Dirección: {props.datos.Dirección}</div>
+        <div className="border-bottom div1">Horario: {props.datos.Horario}</div>
+        <div className="border-bottom div1">Modalidad: {props.datos.Modalidad}</div>
+        <div className="border-bottom div1">Precio consulta: {props.datos.Precio_consulta}</div>
+        <div className="border-bottom div1">Comentarios: {props.datos.Comentarios}</div>
+        <div className="border-bottom div1">Calificación: {props.datos.Calificación}</div>
+        
       </div>
-      <div>{console.log(props.datos)}</div>
+      <Link to="reserva_cita_27">Reservar cita</Link>
     </div>
   )
 }

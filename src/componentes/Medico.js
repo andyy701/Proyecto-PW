@@ -2,7 +2,7 @@ import logo_doctor from "../logo doctor.png"
 import { Link } from "react-router-dom";
 const Medico=(props)=>{
     const cambiarEstado=_=>{
-      props.cambiarInfo([props.infoDoc])
+      props.cambiarInfo(props.infoDoc)
     }
     return(
       <div>
