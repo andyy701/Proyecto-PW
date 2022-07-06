@@ -1,9 +1,10 @@
+
 import Registrarse from "./componentes/Registrarse";
 
-function Newaccount_22() {
+function Newaccount_22(props) {
     return (
       <div>
-        <Registrarse/>
+        <Registrarse toRegistrar={props.toRegistrar}/>
       </div>
     );
 }

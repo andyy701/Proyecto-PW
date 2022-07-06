@@ -28,21 +28,28 @@ import './style.css'
 import Principal from './principal';
 import { useState } from 'react';
 function App() {
-  
-  const rutas=[{path:"comentarios_doc_20",element:<Comentarios_doc_20 />},
-                   {path:"modificar_datos_8",element:<Modificar_datos_8/>},
-                   {path:"calendario_9",element:<Calendario_9 />},
-                   {path:"visualizarCitas_13",element:<VisualizarCitas_13 />},
-                   {path:"preg_priv_doc_19",element:<Preg_priv_doc_19 />},
-                   {path:"preg_pub_doc_18",element:<Preg_pub_doc_18 />},
-                   {path:"finalizarCita_16",element:<FinalizarCita_16 />},
-                   {path:"historiaClinica_15",element:<HistoriaClinica_15 />},
-                   {path:"historicoConsultas_17",element:<HistoricoConsultas_17 />},
-                   {path:"informacionPaciente_14",element:<InformacionPaciente_14 />},
-                   {path:"pacientes_11",element:<Pacientes_11 />}]
 
-  const [mostrarInfo,setMostrarInfo]=useState({});
-  
+  // let ruta1=document.getElementById("1");
+
+  // const arr=[{id:1,path:"iniciar_7",index_element:<Iniciar_7 toRegistrar="registrar_6"/>,path_element:<Route path="registrar_6" element={<Registrar_6 toRegistrar="/iniciar_7" />} />},
+  //            {id:2,path:"registrar_6",index_element:<Registrar_6 toRegistrar="iniciar_7"/>,path_element:""},
+  //            {id:3,path:"newaccount_22",index_element:<Newaccount_22 toRegistrar="login_21" />,path_element:""},
+  //            {id:4,path:"login_21",index_element:<Login_21 toRegistrar="newaccount_22"/>,path_element:<Route path="newaccount_22" element={<Newaccount_22 toRegistrar="/login_21" />} />}]
+
+  const rutas = [{ path: "comentarios_doc_20", element: <Comentarios_doc_20 /> },
+  { path: "modificar_datos_8", element: <Modificar_datos_8 /> },
+  { path: "calendario_9", element: <Calendario_9 /> },
+  { path: "visualizarCitas_13", element: <VisualizarCitas_13 /> },
+  { path: "preg_priv_doc_19", element: <Preg_priv_doc_19 /> },
+  { path: "preg_pub_doc_18", element: <Preg_pub_doc_18 /> },
+  { path: "finalizarCita_16", element: <FinalizarCita_16 /> },
+  { path: "historiaClinica_15", element: <HistoriaClinica_15 /> },
+  { path: "historicoConsultas_17", element: <HistoricoConsultas_17 /> },
+  { path: "informacionPaciente_14", element: <InformacionPaciente_14 /> },
+  { path: "pacientes_11", element: <Pacientes_11 /> }]
+
+  const [mostrarInfo, setMostrarInfo] = useState({});
+
   return (
     <Router>
 
@@ -51,53 +58,56 @@ function App() {
         <Route path="/">
           <Route index element={<Principal />} />
 
-          <Route path="iniciar_7">
-            <Route index element={<Iniciar_7 toRegistrar="registrar_6"/>} />
-            <Route path="registrar_6" element={<Registrar_6 toRegistrar="/iniciar_7"/>} />
+           {/* {
+            arr.map((ruta)=>{
+             <Route path={ruta.path}>
+               <Route index element={ruta.index_element}/>
+               {ruta.path_element}
+             </Route>
+            })
+          }  */}
+
+          <Route path="iniciar_7" id="1">
+            <Route index element={<Iniciar_7 toRegistrar="registrar_6" />} />
+            <Route path="registrar_6" element={<Registrar_6 toRegistrar="/iniciar_7" />} />
             <Route path="inicio_10">
               <Route index element={<Inicio_10 />} />
               {
-                 rutas.map((ruta)=>(
-                   <Route path={ruta.path} element={ruta.element}/>
-                 ))
+                rutas.map((ruta) => (
+                  <Route path={ruta.path} element={ruta.element} />
+                ))
               }
-              </Route>
+            </Route>
+          </Route>
+          <Route path="recuperar_doc" element={<Recuperar_doc />} />
+        </Route>
+
+        <Route path="registrar_6" id="2">
+          <Route index element={<Registrar_6 toRegistrar="iniciar_7" />} />
+          <Route path="iniciar_7" >
+            <Route index element={<Iniciar_7 toRegistrar="/registrar_6" />} />
+            <Route path="inicio_10">
+              <Route index element={<Inicio_10 />} />
+              {
+                rutas.map((ruta) => (
+                  <Route path={ruta.path} element={ruta.element} />
+                ))
+              }
             </Route>
             <Route path="recuperar_doc" element={<Recuperar_doc />} />
           </Route>
+        </Route>
 
-          <Route path="registrar_6" >
-            <Route index element={<Registrar_6 toRegistrar="iniciar_7"/>} />
-            <Route path="iniciar_7" >
-              <Route index element={<Iniciar_7 toRegistrar="/registrar_6"/>}/>
-              <Route path="inicio_10">
-                <Route index element={<Inicio_10 />} />
-                {
-                   rutas.map((ruta)=>(
-                     <Route path={ruta.path} element={ruta.element}/>
-                   ))
-                }
-              </Route>
-              <Route path="recuperar_doc" element={<Recuperar_doc />} />
-            </Route>
-          </Route>
-
-          <Route path="newaccount_22">
-            <Route index element={<Newaccount_22 />} />
-            <Route path="login_21" >
-              <Route index element={<Login_21 />}/>
-            </Route>
-          </Route>
-
+        <Route path="newaccount_22" id="3">
+          <Route index element={<Newaccount_22 toRegistrar="login_21" />} />
           <Route path="login_21" >
-            <Route index element={<Login_21 />} />
-            <Route path="newaccount_22" element={<Newaccount_22 />} />
+            <Route index element={<Login_21 toRegistrar="/newaccount_22" />} />
             <Route path="inicio_paciente_23">
               <Route index element={<Inicio_paciente_23 />} />
               <Route path="perfil_del_doc_pac_25">
-                <Route index element={<Perfil_del_doc_pac_25 cambiarInfo={setMostrarInfo}/>}/>
+                <Route index element={<Perfil_del_doc_pac_25 cambiarInfo={setMostrarInfo} />} />
                 <Route path="perfil_del_doc_pac2">
-                  <Route index element={<Perfil_del_doc_pac2 info={mostrarInfo}/>}/>
+                  <Route index element={<Perfil_del_doc_pac2 info={mostrarInfo} />} />
                   <Route path="reserva_cita_27" element={<Reserva_cita_27 />} />
                 </Route>
               </Route>
@@ -105,11 +115,25 @@ function App() {
             </Route>
             <Route path="recuperar_pac" element={<Recuperar_pac />} />
           </Route>
-        
+        </Route>
 
+        <Route path="login_21" id="4">
+          <Route index element={<Login_21 toRegistrar="newaccount_22"/>} />
+          <Route path="newaccount_22" element={<Newaccount_22 toRegistrar="/login_21" />} />
+          <Route path="inicio_paciente_23">
+            <Route index element={<Inicio_paciente_23 />} />
+            <Route path="perfil_del_doc_pac_25">
+              <Route index element={<Perfil_del_doc_pac_25 cambiarInfo={setMostrarInfo} />} />
+              <Route path="perfil_del_doc_pac2">
+                <Route index element={<Perfil_del_doc_pac2 info={mostrarInfo} />} />
+                <Route path="reserva_cita_27" element={<Reserva_cita_27 />} />
+              </Route>
+            </Route>
+            <Route path="preg_pub_pac_26" element={<Preg_pub_pac_26 />} />
+          </Route>
+          <Route path="recuperar_pac" element={<Recuperar_pac />} />
+        </Route>
 
-
-        
       </Routes>
     </Router>
   );
