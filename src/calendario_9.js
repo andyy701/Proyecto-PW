@@ -1,15 +1,34 @@
-import React from 'react';
-import './App.css';
+// import React from 'react';
+// import './App.css';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction';
 
-
-import {Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, EventSettingsModel} from '@syncfusion/ej2-react-schedule'
-
-function Calendario_9() {
+export default function Calendario_9() {
   return (
 
-    <ScheduleComponent>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-    </ScheduleComponent>
+    <div>
+      <FullCalendar
+        plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin]}
+        initialView="dayGridMonth"
+        headerToolbar={{
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,timeGridWeek"
+        }}
+        businessHours = {{
+          startTime: "7:00",
+          endTime: "19:00",
+          daysOfWeek:[1,2,3,4,5]
+        }}
+        timeZone="local"
+        events={[
+          {title: "event 1",start:"2022-07-18T12:30:00",end:"2022-07-18T14:00:00"}  
+        ]}
+      /> 
+    </div>
+
 
     // <div>
     //   <h1 className="title text-center m-5">Horario de atención</h1>
@@ -113,4 +132,3 @@ function Calendario_9() {
     
   );
 }
-export default Calendario_9;
