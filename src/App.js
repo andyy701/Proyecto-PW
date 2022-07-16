@@ -47,6 +47,8 @@ function App() {
 
 
   return (
+
+    
     <Router>
 
       <Routes>
@@ -59,12 +61,27 @@ function App() {
             <Route index element={<Iniciar_7 toRegistrar="registrar_6" />} />
             <Route path="registrar_6" element={<Registrar_6 toRegistrar="/iniciar_7" />} />
             <Route path="inicio_10">
+
               <Route index element={<Inicio_10 />} />
               {
                 rutas.map((ruta) => (
                   <Route path={ruta.path} element={ruta.element} />
                 ))
               }
+
+              <Route index element={<Inicio_10 toModify="modificar_datos_8" toCalendar="calendario_9" toHistorial="visualizarCitas_13" toPacientes="pacientes_11"/>} />
+              <Route path="comentarios_doc_20" element={<Comentarios_doc_20 />} />
+              <Route path="modificar_datos_8" element={<Modificar_datos_8/>} />
+              <Route path="calendario_9" element={<Calendario_9/>} />
+              <Route path="visualizarCitas_13" element={<VisualizarCitas_13 />} />
+              <Route path="preg_priv_doc_19" element={<Preg_priv_doc_19 />} />
+              <Route path="preg_pub_doc_18" element={<Preg_pub_doc_18 />} />
+              <Route path="finalizarCita_16" element={<FinalizarCita_16 />} />
+              <Route path="historiaClinica_15" element={<HistoriaClinica_15 />} />
+              <Route path="historicoConsultas_17" element={<HistoricoConsultas_17 />} />
+              <Route path="informacionPaciente_14" element={<InformacionPaciente_14 />} />
+              <Route path="pacientes_11" element={<Pacientes_11 />} />
+
             </Route>
             <Route path="recuperar_doc" element={<Recuperar_doc />} />
           </Route>
