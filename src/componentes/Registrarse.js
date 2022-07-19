@@ -1,33 +1,86 @@
 import { Link, useNavigate } from "react-router-dom";
 import Especialidad from "../componentes/Especialidad"
+import Axios from "axios"
+import React from "react"
 
 const Registrarse = (props) => {
     const navigate = useNavigate();
-    const registrar = () =>{navigate(props.toRegistrar)}
+
+    const [projectBody, setProjectBody] = React.useState({
+        name: "",
+        password: "",
+        email: "",
+        numcolegio: "",
+        cv: ""        
+    })
+
+    const registrar = (event) =>{
+        navigate(props.toRegistrar)  
+        
+        event.preventDefault()
+        console.log(projectBody)
+        Axios.post("https://proy-backend.herokuapp.com/registros_med",{
+            name: projectBody.name,
+            password: projectBody.password,
+            email: projectBody.email,
+            numcolegio: projectBody.numcolegio,
+            cv: projectBody.cv
+        }).then(res=>{
+            console.log("MIRA")
+            console.log(res.data);
+            navigate("/")
+            
+        } ).catch(console.log)
+    }
+
+    const handleChange = (event) =>{
+        const {name,value} = event.target
+        setProjectBody(prevBody => ({   
+                ...prevBody,
+                [name] : value
+                       
+        }))
+    }
+
     return (
         <div>
             <h1 class="text-center">Registrarse</h1>
             <form>
                 <div class="text-center m-4">
                     <label for="">Nombre completo:</label>
-                    <input type="text" />
+                    <input type="text"
+                    onChange={handleChange} 
+                    name="name"
+                    value={projectBody.name} />
                 </div>
                 <div class="text-center m-4">
                     <label for="">Contraseña:</label>
-                    <input type="text" />
+                    <input type="text"
+                    onChange={handleChange} 
+                    name="password"
+                    value={projectBody.password}/>
                 </div>
                 <div class="text-center m-4">
                     <label for="">Correo electrónico:</label>
-                    <input type="email" />
+                    <input type="email"
+                    onChange={handleChange} 
+                    name="email"
+                    value={projectBody.email}/>
                 </div>
                 <Especialidad/>
                 <div class="text-center m-4">
                     <label for="">Número de colegio médico:</label>
-                    <input type="number" />
+                    <input type="number"
+                    onChange={handleChange} 
+                    name="numcolegio"
+                    value={projectBody.numcolegio}/>
                 </div>
                 <div class="text-center m-4">
                     <label for="">CV:</label>
-                    <input type="file" />
+                    <input type="file"
+                    onChange={handleChange} 
+                    name="cv"
+                    value={projectBody.cv}/>
                 </div>
 
                 <div class="text-center m-4">
