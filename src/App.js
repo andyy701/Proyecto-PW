@@ -29,8 +29,6 @@ import Principal from './principal';
 import { useState } from 'react';
 function App() {
 
-  
-
   const rutas = [{ path: "comentarios_doc_20", element: <Comentarios_doc_20 /> },
                  { path: "modificar_datos_8", element: <Modificar_datos_8 /> },
                  { path: "calendario_9", element: <Calendario_9 /> },
