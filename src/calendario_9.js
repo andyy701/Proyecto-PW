@@ -24,7 +24,10 @@ export default function Calendario_9() {
         }}
         timeZone="local"
         events={[
-          {title: "event 1",start:"2022-07-18T12:30:00",end:"2022-07-18T14:00:00"}  
+          {title: "Cita con Diego",start:"2022-07-04T07:30:00",end:"2022-07-04T07:45:00",backgroundColor:"green"},
+          {title: "Cita con Andy",start:"2022-07-12T08:45:00",end:"2022-07-12T09:00:00"},
+          {title: "Cita con Angel",start:"2022-07-14T09:15:00",end:"2022-07-14T09:30:00",backgroundColor:"red"},
+          {title: "Cita con Rossana",start:"2022-07-08T08:00:00",end:"2022-07-08T08:15:00",backgroundColor:"blue"}
         ]}
       /> 
     </div>
