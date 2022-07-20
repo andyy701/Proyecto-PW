@@ -20,6 +20,7 @@ const Registrarse = (props) => {
         event.preventDefault()
         console.log(projectBody)
         Axios.post("https://proy-backend.herokuapp.com/registros_med",{
+            id:1,
             name: projectBody.name,
             password: projectBody.password,
             email: projectBody.email,

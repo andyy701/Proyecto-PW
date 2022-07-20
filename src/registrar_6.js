@@ -5,7 +5,7 @@ function Registrar_6(props) {
     return (
       <div>
         
-        <Registrarse toRegistrar={props.toRegistrar}/>
+        <Registrarse toRegistrar={props.toRegistrar} />
       </div>
     );
 }
