@@ -1,10 +1,10 @@
-import Historia_clinica_del_paciente from "./componentes/Historia_clinica_del_paciente";
+import HistoriaClinicaDelPaciente from "./componentes/Historia_clinica_del_paciente";
 import Atencion from "./componentes/Atencion";
 
 function HistoriaClinica15() {
   return (
     <div>
-      <Historia_clinica_del_paciente />
+      <HistoriaClinicaDelPaciente />
       <h2>LISTADO DE ATENCIONES</h2>
       <div>
         <table class="table">

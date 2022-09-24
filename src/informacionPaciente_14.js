@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Historia_clinica_del_paciente from "./componentes/Historia_clinica_del_paciente";
+import HistoriaClinicaDelPaciente from "./componentes/Historia_clinica_del_paciente";
 
 function InformacionPaciente_14() {
   return (
@@ -113,7 +113,7 @@ function InformacionPaciente_14() {
           <li>Alergias: Informa que es alérgico al polvo. Presenta estornudos recurrentes cuando limpian a su alrededor o arregla su closet de ropa personal.</li>
         </ul>
       </div>
-      <Historia_clinica_del_paciente />
+      <HistoriaClinicaDelPaciente />
     </div>
   );
 }
