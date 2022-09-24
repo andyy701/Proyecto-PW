@@ -4,7 +4,7 @@ const Perfil_Profesional = props => {
   return (
     <div>
       <div className="row mb-1 ">
-        <img className="col-4" src={logo_doctor} id="logo-doc"></img>
+        <img className="col-4" src={logo_doctor} id="logo-doc" alt=""></img>
           <div className="col-8">
             <div>Nombre: {props.datos.Nombre}</div>
             <div>Especialidad: {props.datos.Especialidad}</div>

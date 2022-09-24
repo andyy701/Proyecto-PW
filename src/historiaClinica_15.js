@@ -1,7 +1,7 @@
 import Historia_clinica_del_paciente from "./componentes/Historia_clinica_del_paciente";
 import Atencion from "./componentes/Atencion";
 
-function HistoriaClinica_15() {
+function HistoriaClinica15() {
   return (
     <div>
       <Historia_clinica_del_paciente />
@@ -25,4 +25,4 @@ function HistoriaClinica_15() {
     </div>
   );
 }
-export default HistoriaClinica_15;
+export default HistoriaClinica15;

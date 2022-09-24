@@ -8,7 +8,7 @@ const Medico=(props)=>{
       <div>
         <div class="row">
                 {/* <img class="col-5 div1" src="logo doctor.png" id="logo-doc"></img> */}
-                <img src={logo_doctor} id="logo-doc"></img>
+                <img src={logo_doctor} id="logo-doc" alt=""></img>
                 <div class="col-7">
                     <div className="doc-a">
                       <Link to="perfil_del_doc_pac2" onClick={cambiarEstado}>Dra. Kelli Elena Bernal Gallardo</Link>
